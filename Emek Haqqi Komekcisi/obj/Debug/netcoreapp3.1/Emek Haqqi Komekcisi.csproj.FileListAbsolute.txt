@@ -12,3 +12,17 @@ C:\Users\EmilHuseynli\source\repos\Emek Haqqi Komekcisi\Emek Haqqi Komekcisi\bin
 C:\Users\EmilHuseynli\source\repos\Emek Haqqi Komekcisi\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.dll
 C:\Users\EmilHuseynli\source\repos\Emek Haqqi Komekcisi\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.pdb
 C:\Users\EmilHuseynli\source\repos\Emek Haqqi Komekcisi\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.genruntimeconfig.cache
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.csproj.AssemblyReference.cache
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.AssemblyInfoInputs.cache
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.AssemblyInfo.cs
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.csproj.CoreCompileInputs.cache
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.dll
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.pdb
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.exe
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.deps.json
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.runtimeconfig.json
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.runtimeconfig.dev.json
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.dll
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\bin\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.pdb
+C:\Users\EmilHuseynli\Desktop\Homework_group\Emek Haqqi Komekcisi\obj\Debug\netcoreapp3.1\Emek Haqqi Komekcisi.genruntimeconfig.cache

@@ -6,148 +6,126 @@ namespace Emek_Haqqi_Komekcisi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Umumi emek haqqini daxil edin");
-            int a = Convert.ToInt32(Console.ReadLine()); //umumi emek haqqi
-            Console.WriteLine("aile veziyyetiniz e-evli, b-subay, d-dul");
-            string b = Console.ReadLine(); //aile veziyyeti
-            bool isContinue = true;
-            int i = 0; //usaq sayi
-            float Gr = 0; //gross gelir
-            float v = 0;//vergi
-            string c = ""; //fiziki qusur
-            int u = 0; //usaq pulu
-            int aile=0; //aile muavineti
-            do
+            Console.WriteLine("Enter your salary:");
+            int GrossWage = Convert.ToInt32(Console.ReadLine()); //emek haqqi
+            Console.WriteLine("Your marital status; m-married, s-single, w-widow/widower:"); //m-evli; s-subay; w-dul
+            string MaritalStatus = Console.ReadLine(); //aile veziyyeti
+            int ChildrenNumber = 0; //usaq sayi
+            double TotalGrossWage = 0; //umumi gross gelir
+            double tax = 0;//vergi
+            string Disability = ""; //fiziki qusur
+            int ChildMoney = 0; //usaq pulu
+            int FamilyAllowance = 0; //aile muavinet
+            double RateofTax = 0; //vergi derecesi
+            if (MaritalStatus == "w")
             {
-                if (b == "d")
+                Console.WriteLine("Do you have child/children? y-yes n-no");
+                string k = Console.ReadLine();
+                if (k == "y")
                 {
-                    Console.WriteLine("Usaq varmi? e-beli, h-xeyr");
-                    string k = Console.ReadLine();
-                    if (k == "e")
-                    {
-                        Console.WriteLine("Usaq sayini daxil et");
-                        i = Convert.ToInt32(Console.ReadLine());
-                    }
-                    Console.WriteLine("fiziki qusurunuz varmi? e-beli, h-yox");
-                    c = Console.ReadLine();
-                    isContinue = false;
+                    Console.WriteLine("Enter number of your children:");
+                    ChildrenNumber = Convert.ToInt32(Console.ReadLine());
                 }
-                else if (b == "e")
-                {
-                    Console.WriteLine("Usaq varmi? e-beli, h-xeyr");
-                    string k = Console.ReadLine();
-                    if (k=="e")
-                    {
-                        Console.WriteLine("Usaq sayini daxil et");
-                        i = Convert.ToInt32(Console.ReadLine());
-                    }
-                    Console.WriteLine("fiziki qusurunuz varmi? e-beli, h-yox");
-                    c = Console.ReadLine();
-                    isContinue = false;
-                }
-                else if (b == "b")
-                {
-                    Console.WriteLine("fiziki qusurunuz varmi? e-beli, h-yox");
-                    c = Console.ReadLine();
-                    isContinue = false;
-                }
-                else
-                {
-                    Console.WriteLine("Yanlis herf,e-evli, b-subay, d-dul, gosterilen herflerden birini daxil edin");
-                    b = Console.ReadLine();
-                }
-            } while (isContinue);
-            if (b == "e")
+                Console.WriteLine("Do you have any disability? y-yes n-no");
+                Disability = Console.ReadLine();
+            }
+            else if (MaritalStatus == "m")
             {
-                aile = 50;
-                Gr = a + aile;
+                Console.WriteLine("Do you have child/children? y-yes n-no");
+                string k = Console.ReadLine();
+                if (k == "y")
+                {
+                    Console.WriteLine("Enter number of your children:");
+                    ChildrenNumber = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine("Do you have any disability? y-yes n-no");
+                Disability = Console.ReadLine();
+            }
+            else if (MaritalStatus == "s")
+            {
+                Console.WriteLine("Do you have any disability? y-yes n-no");
+                Disability = Console.ReadLine();
+            }
+            TotalGrossWage = GrossWage;
+            if (MaritalStatus == "m")
+            {
+                FamilyAllowance = 50;
+                TotalGrossWage = TotalGrossWage + FamilyAllowance;
             }
             else
             {
-                aile = 0;
-                Gr = a + aile;
+                FamilyAllowance = 0;
+                TotalGrossWage = TotalGrossWage + FamilyAllowance;
             }
+            if(ChildrenNumber == 1)
+            {
+                ChildMoney = 30;
+                TotalGrossWage = TotalGrossWage + ChildMoney;
+            }
+            else if (ChildrenNumber == 2)
+            {
+                ChildMoney = 55;
+                TotalGrossWage = TotalGrossWage + ChildMoney;
+            }
+            else if (ChildrenNumber == 3)
+            {
+                ChildMoney = 75;
+                TotalGrossWage = TotalGrossWage + ChildMoney;
+            }
+            else if (ChildrenNumber >= 4)
+            {
+                ChildMoney = 75 + 15 * (ChildrenNumber - 3);
+                TotalGrossWage = TotalGrossWage + ChildMoney;
+            }
+            if (GrossWage <= 1000)
+            {
+                RateofTax = 15.00 / 100.00;
+                tax = TotalGrossWage * RateofTax;
+            }
+            else if (GrossWage < 2000 && GrossWage > 1000)
+            {
+                RateofTax = 20.00 / 100.00;
+                tax = TotalGrossWage * RateofTax;
+            }
+            else if (GrossWage >= 2000 && GrossWage < 3000)
+            {
+                RateofTax = 25.00 / 100.00;
+                tax = TotalGrossWage * RateofTax;
+            }
+            else if (GrossWage >= 3000)
+            {
+                RateofTax = 30.00 / 100.00;
+                tax = TotalGrossWage * RateofTax;
+            }
+            if (Disability == "y")
+            {
+                tax = tax * 50 / 100;
+            }
+            TotalGrossWage = TotalGrossWage - tax;
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine($"FamilyAllowance-{FamilyAllowance.ToString("0.00")}$");
+            Console.WriteLine($"Money for kids-{ChildMoney.ToString("0.00")}$");
+            Console.WriteLine($"Rate of tax-{RateofTax.ToString("0.00")}%");
+            Console.WriteLine($"amount of tax-{tax.ToString("0.00")}$");
+            Console.WriteLine($"Entered Salary-{GrossWage.ToString("0.00")}$");
+            Console.WriteLine($"Total Gross Wage-{TotalGrossWage.ToString("0.00")}$");
+            int twohundred = (int)Math.Floor(TotalGrossWage / 200);
+            int onehundred = (int)Math.Floor((TotalGrossWage - twohundred * 200) / 100);
+            int fifties = (int)Math.Floor(((TotalGrossWage - twohundred * 200) - onehundred * 100) / 50);
+            int twenties = (int)Math.Floor((((TotalGrossWage - twohundred * 200) - onehundred * 100) - fifties * 50) / 20);
+            int tens = (int)Math.Floor(((((TotalGrossWage - twohundred * 200) - onehundred * 100) - fifties * 50) - twenties * 20) / 10);
+            int fives = (int)Math.Floor((((((TotalGrossWage - twohundred * 200) - onehundred * 100) - fifties * 50) - twenties * 20) - tens * 10) / 5);
+            int ones = (int)Math.Floor(((((((TotalGrossWage - twohundred * 200) - onehundred * 100) - fifties * 50) - twenties * 20) - tens * 10) - fives * 5) / 1);
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine(twohundred + "x 200");
+            Console.WriteLine(onehundred + "x 100");
+            Console.WriteLine(fifties + "x 50");
+            Console.WriteLine(twenties + "x 20");
+            Console.WriteLine(tens + "x 10");
+            Console.WriteLine(fives + "x 5");
+            Console.WriteLine(ones + "x 1");
 
-            if (i==1)
-            {
-                u = 30;
-                Gr = Gr + u;
-            }
-            else if (i==2)
-            {
-                u = 55;
-                Gr = Gr + u;
-            }
-            else if (i==3)
-            {
-                u = 75;
-                Gr = Gr + u;
-            }
-            else if (i>4)
-            {
-                u= 75 + 15 * (i - 3);
-                Gr = Gr + u;
-            }
-
-            
-            if (Gr<=1000)
-            {
-                v = Gr * 15 /100;
-            }
-            else if (Gr<2000 && Gr>1000)
-            {
-                v = Gr * 20 / 100;
-            }
-            else if (Gr>=2000 && Gr<3000)
-            {
-                v = Gr * 25 / 100;
-            }
-            else if (Gr>=3000)
-            {
-                v = Gr * 30 / 100;
-            }
-            if (c == "e")
-            {
-                v = v * 50 / 100;
-            }
-            Gr = Gr - v;
-            Console.WriteLine("Aile muavinati");
-            Console.WriteLine(aile);
-            Console.WriteLine("Usaq pulu");
-            Console.WriteLine(u);
-            Console.WriteLine("Vergi derecesi");
-            if (c=="e")
-            {
-                Console.WriteLine("Elillik var");
-            }
-            else
-            {
-                Console.WriteLine("Elillik yoxdu");
-            }
-            Console.WriteLine("vergi meblegi");
-            Console.WriteLine(v); 
-            Console.WriteLine("Umumi emek haqqi");
-            Console.WriteLine(a);
-            Console.WriteLine("Xalis emek haqqi");
-            Console.WriteLine(Gr);
-            int interval = (int)Math.Floor(Gr / 200);
-            int interval2 = (int)Math.Floor((Gr - interval * 200) / 100);
-            int interval3 = (int)Math.Floor(((Gr - interval * 200) - interval2 * 100) / 50);
-            int interval4 = (int)Math.Floor((((Gr - interval * 200) - interval2 * 100) - interval3 * 50) / 20);
-            int interval5 = (int)Math.Floor(((((Gr - interval * 200) - interval2 * 100) - interval3 * 50) - interval4 * 20) / 10);
-            int interval6 = (int)Math.Floor((((((Gr - interval * 200) - interval2 * 100) - interval3 * 50) - interval4 * 20) - interval5 * 10) / 5);
-            int interval7 = (int)Math.Floor(((((((Gr - interval * 200) - interval2 * 100) - interval3 * 50) - interval4 * 20) - interval5 * 10) - interval6 * 5) / 1);
-            Console.WriteLine(interval+ "x 200"); 
-            Console.WriteLine(interval2+"x 100");
-            Console.WriteLine(interval3 + "x 50");
-            Console.WriteLine(interval4 +"x 20");
-            Console.WriteLine(interval5+"x 10");
-            Console.WriteLine(interval6+"x 5");
-            Console.WriteLine(interval7+"x 1");
-
-
-
-           
         }
+        
     }
 }

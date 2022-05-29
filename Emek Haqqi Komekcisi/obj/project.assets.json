@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EmilHuseynli\\source\\repos\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi.csproj",
+      "projectUniqueName": "C:\\Users\\EmilHuseynli\\Desktop\\Homework_group\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi.csproj",
       "projectName": "Emek Haqqi Komekcisi",
-      "projectPath": "C:\\Users\\EmilHuseynli\\source\\repos\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi.csproj",
+      "projectPath": "C:\\Users\\EmilHuseynli\\Desktop\\Homework_group\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi.csproj",
       "packagesPath": "C:\\Users\\EmilHuseynli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EmilHuseynli\\source\\repos\\Emek Haqqi Komekcisi\\Emek Haqqi Komekcisi\\obj\\",
+      "outputPath": "C:\\Users\\EmilHuseynli\\Desktop\\Homework_group\\Emek Haqqi Komekcisi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EmilHuseynli\\AppData\\Roaming\\NuGet\\NuGet.Config",
